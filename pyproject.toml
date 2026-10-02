@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyChartist"
+version = "0.1.0"
+description = "80+ chart types with one API: static (matplotlib / seaborn) or interactive (Plotly / Dash), host-theme aware."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Yogesh" }]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Framework :: Matplotlib",
+    "Framework :: Dash",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+keywords = ["visualization", "charts", "matplotlib", "seaborn", "plotly", "dash", "eda"]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "plotly>=5.20",
+    "networkx>=3.0",
+    "statsmodels>=0.14",
+]
+
+[project.urls]
+Homepage = "https://github.com/y-v-j/pyChartist"
+Repository = "https://github.com/y-v-j/pyChartist"
+
+[project.optional-dependencies]
+export = ["kaleido"]                                   # static PNG/SVG/PDF export of Plotly charts
+dash = ["dash>=2.16", "dash-bootstrap-components>=1.5"]
+notebook = ["ipykernel", "nbformat", "nbconvert"]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+include = ["pychartist*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B"]
+ignore = ["E741", "B905", "B023", "E731"]

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+notebooks/_output/
+*.part
+dashboards/__pycache__/
+# local development notes and the private reference note used by the coverage test
+instructions.md
+reference/
