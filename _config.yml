@@ -1,0 +1,20 @@
+# GitHub Pages: README.md rendered with the Midnight Ink theme (_layouts/default.html).
+lang: en
+author: Yogesh
+tagline: "One Python API for 82 chart types"
+nav:
+  - title: "Gallery"
+    url: "#gallery"
+  - title: "Install"
+    url: "#install"
+  - title: "Themes"
+    url: "#themes"
+license_name: "MIT"
+copyright: "© 2026 Yogesh"
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /gallery/comparison/bar.png
+plugins:
+  - jekyll-seo-tag
